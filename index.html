@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A bouquet for My Loori ??</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    h1 {
+      color: #ff69b4;
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    .bouquet {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      max-width: 800px;
+    }
+    .flower {
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .flower:hover {
+      transform: scale(1.1);
+    }
+    .message {
+      display: none;
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff0f5;
+      border: 1px solid #ff69b4;
+      border-radius: 12px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      font-size: 0.9em;
+      z-index: 1;
+    }
+    .flower.show-message .message {
+      display: block;
+    }
+    .music {
+      margin-top: 40px;
+    }
+    .music iframe {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>A bouquet for My Loori ??</h1>
+  <div class="bouquet">
+    <div class="flower" style="background-image: url('https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt5f18c2119ce26485/6668df65db90945e0caf9be6/beautiful-flowers-lotus.jpg?q=70&width=3840&auto=webp');" onclick="toggleMessage(this)"><div class="message">You have the voice of an angel</div></div>
+    <div class="flower" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/sacred-lotus-gettyimages-1143403162-646fa5a441f5d.jpg?crop=0.535xw:1.00xh;0.0519xw,0&resize=980:*');" onclick="toggleMessage(this)"><div class="message">I love your smile</div></div>
+    <div class="flower" style="background-image: url('https://images.immediate.co.uk/production/volatile/sites/10/2018/02/4f492b22-2d29-4360-80a6-79879487c7b7-e07922e.jpg?quality=90&fit=700,466');" onclick="toggleMessage(this)"><div class="message">You have the cutest laugh</div></div>
+    <div class="flower" style="background-image: url('https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonaskakaroto-736230.jpg&fm=jpg');" onclick="toggleMessage(this)"><div class="message">You're an amazing friend, and an even better girlfriend</div></div>
+    <div class="flower" style="background-image: url('https://veggiegardenseeds.com.au/cdn/shop/files/cosmos-gloria-flower-seeds_b4ce3aab-253c-43be-947e-cfa61963b0f5.jpg?v=1702364825&width=1080');" onclick="toggleMessage(this)"><div class="message">You bring happiness to this world</div></div>
+    <div class="flower" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh&resize=980:*');" onclick="toggleMessage(this)"><div class="message">You are so kind and caring and you deserve the world!</div></div>
+    <div class="flower" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwVRvRNE9dTG6YUVvp9Tild2GjQJZwu9NeJg&s');" onclick="toggleMessage(this)"><div class="message">You're the cutest person alive!</div></div>
+    <div class="flower" style="background-image: url('https://c02.purpledshub.com/uploads/sites/40/2023/08/JI230816Cosmos220-6d9254f-edited-scaled.jpg');" onclick="toggleMessage(this)"><div class="message">Thinking about you puts a smile on my face every day</div></div>
+    <div class="flower" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/pale-purple-cosmos-flower-1656258166.jpeg?crop=1.00xw:0.834xh;0,0.160xh&resize=980:*');" onclick="toggleMessage(this)"><div class="message">You're so freaking perfect</div></div>
+    <div class="flower" style="background-image: url('https://www.theflowerconnection.co.uk/wp-content/uploads/2023/05/purple-flower.png');" onclick="toggleMessage(this)"><div class="message">I love you to the moon and back!</div></div>
+  </div>
+
+  <!-- Spotify Embed -->
+  <div class="music">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2plbrEY59IikOBgBGLjaoe?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+
+  <script>
+    function toggleMessage(el) {
+      const isShown = el.classList.contains('show-message');
+      document.querySelectorAll('.flower').forEach(f => f.classList.remove('show-message'));
+      if (!isShown) {
+        el.classList.add('show-message');
+      }
+    }
+  </script>
+</body>
+</html>
